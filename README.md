@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # CodeMentor AI 🚀
 
 **AWS AI Hackathon 2026** — An AI-powered code mentor that helps CS students prepare for placements through RAG-driven code review, personalized roadmaps, and adaptive coding games.
@@ -249,3 +250,7 @@ All LLM calls include:
 - **Graceful logging** of all errors (`logger.error(...)`)
 
 No API error will crash the backend — all return a structured `{"error": "..."}` response.
+=======
+# Code-Mentor-AI
+CodeMentor AI is an AI-powered coding mentor that analyzes code, detects recurring mistakes (Error DNA), generates personalized learning roadmaps, and helps students prepare for technical interviews.
+>>>>>>> cd211e1a5c837fae4896f616ca63413b2d510e21

@@ -1,5 +1,5 @@
 # ─────────────────────────────────────────────
-# 🟦 Node.js / React + Vite (Frontend)
+# Node.js / React + Vite (Frontend)
 # ─────────────────────────────────────────────
 node_modules/
 dist/
@@ -7,21 +7,31 @@ build/
 .vite/
 .vite-cache/
 
-# Vite build artifacts
-*.local
+# Vite logs
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
 
 # Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-lerna-debug.log*
+*.log
 
 # TypeScript
 *.tsbuildinfo
 
+# Package managers
+.npm/
+.pnp.*
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+
 # ─────────────────────────────────────────────
-# 🐍 Python / FastAPI (Backend)
+# Python / FastAPI (Backend)
 # ─────────────────────────────────────────────
 
 # Virtual environments
@@ -29,171 +39,81 @@ lerna-debug.log*
 venv/
 env/
 ENV/
-.env.bak
 
 # Python cache
 __pycache__/
 *.py[cod]
-*$py.class
-*.pyc
 *.pyo
 *.pyd
 
-# Distribution / packaging
+# Build artifacts
+build/
+dist/
 *.egg
 *.egg-info/
-dist/
-build/
-eggs/
-parts/
-var/
-sdist/
-develop-eggs/
-.installed.cfg
-lib/
-lib64/
-wheels/
 
 # Testing
 .pytest_cache/
 .coverage
 .coverage.*
 htmlcov/
-.tox/
-.nox/
-coverage.xml
-*.cover
-.hypothesis/
-nosetests.xml
 
-# MyPy / type checkers
+# Type checking
 .mypy_cache/
-.dmypy.json
-dmypy.json
 .pyre/
 .pytype/
 
-# Jupyter Notebooks
-.ipynb_checkpoints/
-
-# Celery
-celerybeat-schedule
-celerybeat.pid
 
 # ─────────────────────────────────────────────
-# 🔐 Environment & Secrets
+# Environment & Secrets
 # ─────────────────────────────────────────────
 .env
 .env.*
 !.env.example
+
 *.pem
 *.key
 secrets.json
 
+
 # ─────────────────────────────────────────────
-# 🗄️ Databases & Index Files
+# Databases & Index Files
 # ─────────────────────────────────────────────
 *.db
 *.sqlite
 *.sqlite3
-*.db-shm
-*.db-wal
 
-# FAISS indexes (large binary files)
-knowledge_base/faiss_index
-knowledge_base/*.index
-knowledge_base/user_indexes/
+# FAISS vector indexes
+backend/knowledge_base/faiss_index
+backend/knowledge_base/user_faiss_index
 *.faiss
+*.index
+
 
 # ─────────────────────────────────────────────
-# 📝 Logs
+# IDE / Editor files
 # ─────────────────────────────────────────────
-logs/
-*.log
-*.logs
-
-# ─────────────────────────────────────────────
-# 🖥️ IDEs & Editors
-# ─────────────────────────────────────────────
-
-# VS Code
 .vscode/
-!.vscode/extensions.json
-!.vscode/settings.json.example
-
-# JetBrains (PyCharm, WebStorm, etc.)
 .idea/
-*.iws
 *.iml
 *.ipr
-out/
+*.iws
 
-# Sublime Text
-*.sublime-project
-*.sublime-workspace
-
-# Vim / Neovim
-*.swp
-*.swo
-[._]*.s[a-v][a-z]
-!*.svg
-[._]*.sw[a-p]
-Session.vim
-Sessionx.vim
-.netrwhist
-*~
-
-# Emacs
-\#*\#
-/.emacs.desktop
-/.emacs.desktop.lock
-*.elc
-auto-save-list
-tramp
-.\#*
 
 # ─────────────────────────────────────────────
-# 🖱️ OS Generated Files
+# OS files
 # ─────────────────────────────────────────────
-
-# macOS
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-.AppleDouble
-.LSOverride
-
-# Windows
 Thumbs.db
-Thumbs.db:encryptable
-ehthumbs.db
-ehthumbs_vista.db
 Desktop.ini
-$RECYCLE.BIN/
-*.lnk
 
-# Linux
-*~
 
 # ─────────────────────────────────────────────
-# 📦 Package managers
+# Temporary files
 # ─────────────────────────────────────────────
-.pnp.*
-.yarn/cache
-.yarn/unplugged
-.yarn/build-state.yml
-.yarn/install-state.gz
-.npm/
-
-# ─────────────────────────────────────────────
-# 🔧 Misc
-# ─────────────────────────────────────────────
-*.bak
 *.tmp
 *.temp
-*.orig
+*.bak
 .cache/
 tmp/
 temp/
