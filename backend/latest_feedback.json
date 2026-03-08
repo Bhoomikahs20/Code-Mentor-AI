@@ -1,0 +1,40 @@
+{
+  "errors": [
+    {
+      "type": "system_error",
+      "concept": "general",
+      "what": "AI Pipeline Error",
+      "why": "The LLM request failed or timed out. Check backend logs for the exact OpenAI error.",
+      "fix": "Verify that your OPENAI_API_KEY is valid and has billing enabled.",
+      "hints": [],
+      "fixed_code": ""
+    }
+  ],
+  "best_practices": [],
+  "overall_feedback": "AI analysis incomplete \u2014 please retry. The backend failed to reach the LLM provider.",
+  "time_complexity": "Unknown",
+  "space_complexity": "Unknown",
+  "concepts_to_study": [
+    "general_programming"
+  ],
+  "confidence_score": 0.3,
+  "is_recurring": false,
+  "encouraging_message": "System is currently experiencing issues. Keep coding!",
+  "code_features": {
+    "language": "python",
+    "functions": [],
+    "has_recursion": false,
+    "has_loops": false,
+    "loop_types": [],
+    "has_try_except": false,
+    "has_class": true,
+    "import_count": 5,
+    "line_count": 30,
+    "complexity_estimate": "low",
+    "suspected_concepts": [
+      "object_oriented_programming"
+    ]
+  },
+  "rag_chunks_used": 0,
+  "rag_context_topics": []
+}

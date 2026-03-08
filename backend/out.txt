@@ -1,0 +1,37 @@
+Traceback (most recent call last):
+  File "C:\Users\hsbhu\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\hsbhu\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\engine\default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.FeatureNotSupported: extension "vector" is not available
+HINT:  The extension must first be installed on the system where PostgreSQL is running.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "test_startup.py", line 5, in <module>
+    from app.main import app
+  File "D:\MyProjects\aws hacthon\updated code mentor ia\code mentor-ai (2)\code mentor-ai\backend\app\main.py", line 31, in <module>
+    conn.execute(__import__("sqlalchemy").text("CREATE EXTENSION IF NOT EXISTS vector"))
+  File "C:\Users\hsbhu\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\engine\base.py", line 1418, in execute
+    return meth(
+  File "C:\Users\hsbhu\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\sql\elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\hsbhu\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\engine\base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\hsbhu\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\engine\base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+  File "C:\Users\hsbhu\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\engine\base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\hsbhu\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\engine\base.py", line 2353, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\hsbhu\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\hsbhu\AppData\Local\Programs\Python\Python38\lib\site-packages\sqlalchemy\engine\default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.NotSupportedError: (psycopg2.errors.FeatureNotSupported) extension "vector" is not available
+HINT:  The extension must first be installed on the system where PostgreSQL is running.
+
+[SQL: CREATE EXTENSION IF NOT EXISTS vector]
+(Background on this error at: https://sqlalche.me/e/20/tw8g)
